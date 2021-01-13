@@ -85,6 +85,7 @@ a {
 .topnav a:hover {
     background-color: var(--primary-color);
     color: var(--bg-color);
+    border-radius: 8px;
 }
 
 
@@ -92,6 +93,7 @@ a {
 
 .topnav .icon {
     display: none;
+    margin-right: 15px;
 }
 
 
@@ -141,6 +143,7 @@ a {
     display: flex;
     align-items: center;
     font-size: 1rem;
+    margin-right: 20px;
 }
 
 .theme-switch {
@@ -199,20 +202,25 @@ input:checked+.slider:before {
     height: 100vh;
 }
 
+#about {
+    background: var(--primary-color);
+}
+
 .parent {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 0px;
+    grid-column-gap: 30px;
     grid-row-gap: 0px;
 }
 
 .div1 {
-    grid-area: 1 / 1 / 7 / 6;
+    grid-area: 1 / 1 / 6 / 6;
 }
 
 .div2 {
-    grid-area: 2 / 4 / 4 / 6;
+    grid-area: 1 / 4 / 5 / 6;
+    transform: translate(0%, 20%);
 }
 
 .div3 {
@@ -220,6 +228,59 @@ input:checked+.slider:before {
     padding-top: 100px;
 }
 
+@media screen and (max-width: 900px) {
+    .div1 {
+        grid-area: 1 / 1 / 6 / 6;
+    }
+    .div2 {
+        grid-area: 1 / 1 / 2 / 6;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .div3 {
+        grid-area: 2 / 1 / 5 / 6;
+    }
+}
+
 .sameline {
     line-height: 30%;
+}
+
+
+/* Button */
+
+.btn {
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+    border: 3px solid;
+    border-radius: 6px;
+    padding: 0.5em 2em;
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+.btn:hover {
+    color: var(--bg-color);
+    background-color: var(--primary-color);
+    border-radius: 8px;
+}
+
+
+/* Scrollbar */
+
+
+/* Works on Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    border: 3px solid rgba(255, 255, 255, 0);
 }
