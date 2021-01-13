@@ -1,4 +1,5 @@
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+
 function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -15,14 +16,27 @@ const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"
 function switchTheme(e) {
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
         document.getElementById("logo").src = "./assets/images/fck2.svg";
     } else {
         document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
         document.getElementById("logo").src = "./assets/images/fck.svg";
     }
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
+
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+        document.getElementById("logo").src = "./assets/images/fck2.svg";
+    }
+}
 
 /* Typewriter */
 
@@ -76,7 +90,9 @@ window.onload = function() {
             new TxtRotate(elements[i], JSON.parse(toRotate), period);
         }
     }
+
     // INJECT CSS
+
     var css = document.createElement("style");
     css.type = "text/css";
     css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
