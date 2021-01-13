@@ -9,9 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/style.css">
+
+    <script defer src="./assets/logic/app.js"></script>
 </head>
 
 <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <div class="topnav" id="myTopnav">
         <img id="logo" src="./assets/images/fck.svg" class="resizelogo"></img>
         <a class="noHover">
@@ -28,7 +31,7 @@
         <a href="#about">Sobre</a>
         <a href="#home" class="active">Assinar</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
+            <i class="fa fa-bars fa-lg"></i>
         </a>
     </div>
     <section id="home">
@@ -42,8 +45,9 @@
                     <h1>Você cuida das vendas, nós cuidamos</h1>
                     <h1 class="sameline"><span class="txt-rotate" data-period="2000" data-rotate='[ "do seu e-commerce.", "da hospedagem.", "do código.", "do banco de dados.", "do design.", "do SEO.", "da manutenção.", "dos relatórios de anúncios.", "do cadastro dos usuários.", "da posição no Google.", "da cibersegurança."]'></span>
                 </p>
-
-                </h1>
+                <button class="btn">
+                    Assinar
+                </button>
             </div>
             <div class="div3">
                 <img src="./assets/images/prisma-verao.png" alt="" class="resizeheader">
@@ -51,7 +55,7 @@
         </div>
     </section>
     <section id="about">
-
+        <p>teste</p>
     </section>
     <section id="pricing">
 
@@ -59,8 +63,6 @@
     <section id="contact">
 
     </section>
-
-    <script src="./assets/logic/app.js"></script>
 </body>
 
 </html>
