@@ -25,6 +25,8 @@ body {
     font-family: 'Merriweather Sans', sans-serif;
     background-color: var(--bg-color);
     color: var(--font-color);
+    margin: 0px;
+    padding: 0px;
 }
 
 h1 {
@@ -41,11 +43,12 @@ a {
 /* Add a black background color to the top navigation */
 
 .topnav {
-    background-color: --bg-color;
-    overflow: hidden;
+    background: var(--bg-color);
     position: fixed;
-    top: 5;
     width: 100%;
+    top: 0;
+    z-index: 1;
+    padding-top: 0.5rem;
 }
 
 
@@ -54,7 +57,7 @@ a {
 .topnav a {
     float: right;
     display: block;
-    color: --font-color;
+    color: var(--font-color);
     text-align: justify;
     /* For Edge */
     -moz-text-align-last: right;
@@ -134,6 +137,7 @@ a {
 
 .resizeheader {
     width: 100%;
+    margin: 1rem;
 }
 
 
@@ -204,6 +208,9 @@ input:checked+.slider:before {
 
 #about {
     background: var(--primary-color);
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 .parent {
