@@ -1,11 +1,17 @@
 :root {
     --primary-color: #000000;
     --secondary-color: #536390;
-    --font-color: #424242;
-    --bg-color: #fff;
-    --bg-colorbutton: black;
+    --font-color: #3b3a3a;
+    --bg-color: hsl(0, 0%, 98%);
     --bg-colorbutton: #000000;
     --heading-color: #292922;
+    --primary-color-red: hsl(0, 78%, 62%);
+    --primary-color-cyan: hsl(180, 62%, 55%);
+    --primary-color-orange: hsl(34, 97%, 64%);
+    --primary-color-blue: hsl(212, 86%, 64%);
+    --neutral-color-bark-blue: hsl(234, 12%, 34%);
+    --neutral-color-grayish-blue: hsl(240, 3%, 45%);
+    --neutral-color-light-gray: hsl(0, 0%, 98%);
 }
 
 [data-theme="dark"] {
@@ -24,7 +30,6 @@
 body {
     font-family: 'Merriweather Sans', sans-serif;
     background-color: var(--bg-color);
-    color: var(--font-color);
     margin: 0px;
     padding: 0px;
 }
@@ -112,6 +117,14 @@ a {
     }
 }
 
+.resizelogo {
+    width: 250px;
+}
+
+.resizeheader {
+    width: 100%;
+}
+
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 
@@ -129,15 +142,12 @@ a {
         display: block;
         text-align: left;
     }
-}
-
-.resizelogo {
-    width: 250px;
-}
-
-.resizeheader {
-    width: 100%;
-    margin: 1rem;
+    .resizeheader {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
 }
 
 
@@ -203,12 +213,11 @@ input:checked+.slider:before {
 /* Sections */
 
 #home {
-    height: 100vh;
+    min-height: 50vh;
 }
 
 #about {
-    background: var(--primary-color);
-    margin: 0px;
+    margin: 15px;
     padding: 0px;
     box-sizing: border-box;
 }
@@ -246,6 +255,9 @@ input:checked+.slider:before {
     }
     .div3 {
         grid-area: 2 / 1 / 5 / 6;
+    }
+    #home {
+        max-height: 101vh;
     }
 }
 
@@ -290,4 +302,139 @@ input:checked+.slider:before {
     background-color: var(--primary-color);
     border-radius: 20px;
     border: 3px solid rgba(255, 255, 255, 0);
+}
+
+
+/* ====================== ABOUT ========================*/
+
+.header {
+    max-width: 800px;
+    padding: 1em;
+    font-size: 0.8em;
+    margin: 4em auto;
+    color: var(--neutral-color-bark-blue);
+    position: relative;
+}
+
+.header h1 {
+    width: 90%;
+    margin: 0 auto;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.header h1 span {
+    display: block;
+    font-weight: 200;
+}
+
+.header p {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--neutral-color-grayish-blue);
+}
+
+.card {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 1.2em 2em 1.2em 2em;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.14);
+    border-radius: 5px;
+    margin-bottom: 1.5em;
+    color: var(--neutral-color-bark-blue);
+    border-top: 5px solid;
+}
+
+.card h2 {
+    font-weight: 600;
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+.card p {
+    margin: 0;
+    margin-bottom: 2em;
+    font-size: 15px;
+    color: var(--neutral-color-grayish-blue);
+}
+
+.card figure {
+    margin: 0;
+    margin-bottom: -0.5em;
+    position: relative;
+    height: 60px;
+}
+
+.card img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 140%;
+}
+
+.supervisor {
+    border-top-color: var(--primary-color-cyan);
+    grid-area: supervisor;
+}
+
+.team {
+    border-top-color: var(--primary-color-red);
+    grid-area: team;
+}
+
+.karma {
+    border-top-color: var(--primary-color-orange);
+    grid-area: karma;
+}
+
+.calculator {
+    border-top-color: var(--primary-color-blue);
+    grid-area: calculator;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--neutral-color-light-gray);
+    font-size: 0.8em;
+    position: sticky;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        font-size: 15px;
+    }
+    .header {
+        font-size: 1em;
+        margin: 4em auto;
+    }
+    main {
+        width: 1200px;
+        margin: 0 auto;
+        margin-bottom: 90px;
+        display: grid;
+        row-gap: 30px;
+        grid-template-areas: ". team ." "supervisor team calculator" "supervisor karma calculator" ". karma .";
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 400px 400px 400px;
+    }
+    .card {
+        margin: 0 auto;
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
 }
