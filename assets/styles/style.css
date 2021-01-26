@@ -412,7 +412,7 @@ footer {
     height: 2.5rem;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 900px) {
     body {
         font-size: 15px;
     }
