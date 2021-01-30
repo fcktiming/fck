@@ -219,6 +219,7 @@ input:checked+.slider:before {
 
 #about {
     margin: 15px;
+    margin-top: -70px;
     padding: 0px;
     box-sizing: border-box;
 }
