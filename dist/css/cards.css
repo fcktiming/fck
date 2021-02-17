@@ -1,0 +1,92 @@
+.fck {
+    position: relative;
+    overflow: hidden;
+    min-width: 230px;
+    max-width: 270px;
+    width: 100%;
+    text-align: left;
+    border-radius: 0 0 0 27px;
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 13.0px);
+    -webkit-backdrop-filter: blur( 13.0px);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.fck-f {
+    margin-right: -60px;
+}
+
+.fck * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.fck img {
+    max-width: 100%;
+    vertical-align: top;
+    opacity: 0.9;
+}
+
+.fck figcaption {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+.fck figcaption a {
+    padding: 5px;
+    border: 1px solid;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    margin: 10px 0;
+    display: inline-block;
+    opacity: 0.65;
+    width: 47%;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.fck figcaption a:hover {
+    opacity: 1;
+}
+
+.fck .profile {
+    border-radius: 50%;
+    position: absolute;
+    bottom: 100%;
+    left: 20%;
+    top: -60%;
+    z-index: 1;
+    max-width: 150px;
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.fck .follow {
+    margin-right: 4%;
+    border-color: #ecebe1;
+}
+
+.fck h2 {
+    margin: 0 0 5px;
+    font-weight: 300;
+}
+
+.fck h2 span {
+    display: block;
+    font-size: 0.5em;
+}
+
+.letter {
+    margin: 0 0 10px;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    line-height: normal;
+}
