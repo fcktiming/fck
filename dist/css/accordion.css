@@ -1,0 +1,52 @@
+.Accordion-tabs {
+    max-width: 600px;
+    list-style: none;
+    text-align: left;
+}
+
+.Accordion-tab {
+    width: 100%;
+}
+
+.Accordion-tab-headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    border-bottom: 1px solid #b6c1da;
+    transition: 0.2s ease all;
+    padding: 20px 15px;
+    cursor: pointer;
+    font-weight: 200;
+}
+
+.Accordion-tab-headline:hover>i {
+    color: darkorange;
+}
+
+.Accordion-tab-headline>h4 {
+    user-select: none;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 15px;
+}
+
+.Accordion-tab-content {
+    overflow: hidden;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    height: 100%;
+    max-height: 0;
+    transition: 0.4s ease all;
+}
+
+p {
+    margin-top: 15px;
+}
+
+.Accordion-tab--open .Accordion-tab-headline .icon::after {
+    transform: scaleY(0);
+}
+
+i {
+    color: rgb(0, 200, 255);
+}
