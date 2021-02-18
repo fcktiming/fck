@@ -1932,6 +1932,10 @@ main {
     opacity: 0
 }
 
+.mini {
+    width: 50px;
+}
+
 .is-loaded .asset-light,
 .is-loaded .asset-dark {
     visibility: visible;
