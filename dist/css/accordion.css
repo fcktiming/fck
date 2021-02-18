@@ -6,6 +6,7 @@
 
 .Accordion-tab {
     width: 100%;
+    margin-left: -15px;
 }
 
 .Accordion-tab-headline {
@@ -14,7 +15,7 @@
     align-items: left;
     border-bottom: 1px solid #b6c1da;
     transition: 0.2s ease all;
-    padding: 20px 15px;
+    padding: 20px 5px;
     cursor: pointer;
     font-weight: 200;
 }
@@ -32,7 +33,7 @@
 
 .Accordion-tab-content {
     overflow: hidden;
-    padding: 0px 15px;
+    padding: 0px 5px;
     box-sizing: border-box;
     height: 100%;
     max-height: 0;
