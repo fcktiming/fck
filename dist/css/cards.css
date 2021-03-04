@@ -265,24 +265,25 @@
     transition: all 0.2s ease;
 }
 
+
 #slide-1:checked~.bullets .bullets__item--1 {
-    background: #fff;
+    background: cyan;
 }
 
 #slide-2:checked~.bullets .bullets__item--2 {
-    background: #fff;
+    background: cyan;
 }
 
 #slide-3:checked~.bullets .bullets__item--3 {
-    background: #fff;
+    background: cyan;
 }
 
 #slide-4:checked~.bullets .bullets__item--4 {
-    background: #fff;
+    background: cyan;
 }
 
 #slide-5:checked~.bullets .bullets__item--5 {
-    background: #fff;
+    background: cyan;
 }
 
 
