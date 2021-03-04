@@ -294,6 +294,8 @@
     border-radius: 8px;
     background: #fff;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 
@@ -313,7 +315,7 @@
 .slider__holder {
     position: relative;
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
     margin: 0 auto;
     margin-top: 20px;
     text-align: left;
@@ -344,6 +346,12 @@
 
 .slider__item-content {
     padding: 40px;
+}
+
+.slider__item-content>img {
+    border-radius: 50%;
+    width: 110px;
+    margin-top: -7px;
 }
 
 @media (max-width: 600px) {
@@ -394,5 +402,5 @@
 }
 
 .bullets__item:hover {
-    background: #fff;
+    background: rgb(219, 91, 21);
 }
