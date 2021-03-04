@@ -4,4 +4,4 @@ People spend a lot of time looking for the right time to start their projects, l
 
 Screw the "right time". Start right now to put your dreams into practice.
 
-Fcktiming was founded in 2021 with this mission, doing everything to make your project a reality, without stressing you about technicalities.
+Fcktiming was founded in 2020 with this mission, doing everything to make your project a reality, without stressing you about technicalities.
